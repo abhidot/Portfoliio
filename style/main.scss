@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=MuseoModerno:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+//Variables
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a, a:active ,a:visited {
+    text-decoration: none;
+}
+
+body {
+    font-size: large;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins', cursive;
+}
+
+.navbar {
+    background-color: rgba(255,255,255,1) !important;
+    font-family: 'MuseoModerno', cursive;
+    font-size: x-large;
+    box-shadow: 0 2px 10px rgba($color: #000000, $alpha: 0.1);
+}
+div#collapsibleNavbar.collapse.navbar-collapse{
+    margin-left: 25%;
+    li {
+        margin: auto 10px;
+    }
+}
+
+div.row{
+        margin: 0;
+    }
+
+section {
+    padding: 0;
+    padding-top: 77px;
+    margin:0;
+}
+
+#home {
+    img {
+        height: 80vh;
+        width: 100%;
+        margin-top:20px;
+        margin-left: 30%;
+    }
+}
+
+.home-block {
+    background-color: rgb(0, 123, 255);
+    height: 88vh;
+}
+
+.home-intro {
+    padding-top: 20%;
+    height: 100%;
+    margin: auto 0;
+    padding:auto 0;
+    font-size: 70px;
+    span {
+        opacity: 40%;
+        font-size: 50px;
+    }
+}
+
+#about,#achievements {
+    background-image: url('../images/about.jpg');
+    min-height: 100vh;
+    background-size: cover;
+    background-position: left;
+    position: relative;
+}
+
+#achievements {
+    background-image: url('../images/achievements.jpg');
+    display: flex;
+    background-position: right;
+    height: min-content;
+    justify-content: left;
+    align-items: center;
+    padding-left:50% ;
+    
+
+    .achievement-heading {
+        font-size: 45px;
+        color: white;
+    }
+    .achievement-content {
+        font-size: 20px;
+        padding-left: 10px;
+        color: white;
+        li{
+            padding: 10px;
+        }
+    }
+}
+
+.about-heading {
+    font-size: 50px;
+    margin-top: 6%;
+    margin-left: 10%;
+    color: white;
+}
+.about-content {
+    font-size: 25px;
+    padding-top: 3%;
+    margin-left: 12%;
+    color: white;
+}
+
+#skills  {
+    font-size: normal;
+    background-color: #f3f3f3;
+
+    h1 {
+        font-size: 50px;
+        padding:10px 20px;
+        margin-bottom: 30px;
+        width: max-content;
+        text-align: center;
+        border-bottom:3px solid rgb(0, 123, 255);
+    }
+
+    .row {
+        position: relative;
+        display: flex;
+        justify-content: space-around;
+        align-items: stretch;
+        flex-wrap: wrap;
+    }
+
+    .card {
+        margin: 20px;
+        max-width: 320px;
+        border-radius: 40px;
+        border: none;
+        padding: 40px 30px;
+        background-color: #f3f3f3;
+        box-shadow: -6px -6px 20px rgba(255,255,255,0.6),
+        6px 6px 20px rgba(0,0,0,0.1);
+
+        &:hover {
+            box-shadow:inset -6px -6px 10px rgba(255,255,255,0.3),
+        inset 6px 6px 10px rgba(0,0,0,0.1);
+        }
+
+        .imgBx {
+            position: relative;
+            text-align: center;
+
+            img {
+                max-width: 120px;
+            }
+        }
+
+        .contentBx {
+            position: realtive;
+            margin-top: 20px;
+            text-align: center;
+            
+            h2 {
+                color: rgb(0, 123, 255);
+                font-weight: 700;
+                font-size: 1.6em;
+            }
+        }
+    }
+}
+@media(max-width:770px){
+    html {
+        overflow-x: hidden !important;
+    }
+    html,body, .navbar {
+        width: 88vw;
+    }
+    div#collapsibleNavbar.collapse.navbar-collapse{
+        margin-left: 10px;
+    }
+    #home {
+        img {
+            height: 80vh;
+            margin: 0;
+            justify-content: center !important;
+        }
+        .home-intro{
+            font-size: 47px;
+
+            span{
+                font-size: 30px;
+            }
+        }
+        div.row div.col-md-6{
+            padding-right: 0;
+        }
+    }
+    .about-heading {
+        margin-left: 20px;
+    }
+    .about-content {
+        margin-left: 20px;
+    }
+    #achievements {
+        padding:20px 1%;
+        margin: 0;
+    }
+}
