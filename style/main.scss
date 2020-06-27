@@ -12,10 +12,12 @@ a, a:active ,a:visited {
     text-decoration: none;
 }
 
+
+
 body {
-    font-size: large;
     display: flex;
     align-items: center;
+    position: relative;
     justify-content: center;
     font-family: 'Poppins', cursive;
 }
@@ -47,8 +49,15 @@ section {
     img {
         height: 80vh;
         width: 100%;
-        margin-top:20px;
+        margin-top:25px;
         margin-left: 30%;
+        box-shadow: -6px -6px 20px rgba(255,255,255,0.6),
+        6px 6px 20px rgba(0,0,0,0.1);
+
+        &:hover {
+            box-shadow:inset -8px -8px 20px rgba(255,255,255,0.3),
+        inset 8px 8px 20px rgba(0,0,0,0.1);
+        }
     }
 }
 
@@ -110,6 +119,7 @@ section {
 .about-content {
     font-size: 25px;
     padding-top: 3%;
+    padding-bottom: 10px;
     margin-left: 12%;
     color: white;
 }
@@ -120,7 +130,7 @@ section {
 
     h1 {
         font-size: 50px;
-        padding:10px 20px;
+        padding:30px 20px 10px;
         margin-bottom: 30px;
         width: max-content;
         text-align: center;
@@ -140,7 +150,7 @@ section {
         max-width: 320px;
         border-radius: 40px;
         border: none;
-        padding: 40px 30px;
+        padding: 50px 30px;
         background-color: #f3f3f3;
         box-shadow: -6px -6px 20px rgba(255,255,255,0.6),
         6px 6px 20px rgba(0,0,0,0.1);
@@ -172,12 +182,24 @@ section {
         }
     }
 }
+
+
+
+
+
+
+
+
 @media(max-width:770px){
-    html {
+    html,body{
         overflow-x: hidden !important;
     }
-    html,body, .navbar {
-        width: 88vw;
+    body {
+        overflow-x: hidden;
+        width: 100%;
+        -webkit-box-sizing: border-box;
+           -moz-box-sizing: border-box;
+                box-sizing: border-box;
     }
     div#collapsibleNavbar.collapse.navbar-collapse{
         margin-left: 10px;
@@ -187,13 +209,6 @@ section {
             height: 80vh;
             margin: 0;
             justify-content: center !important;
-        }
-        .home-intro{
-            font-size: 47px;
-
-            span{
-                font-size: 30px;
-            }
         }
         div.row div.col-md-6{
             padding-right: 0;

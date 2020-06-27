@@ -12,13 +12,13 @@ a, a:active, a:visited {
 }
 
 body {
-  font-size: large;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -54,8 +54,15 @@ section {
 #home img {
   height: 80vh;
   width: 100%;
-  margin-top: 20px;
+  margin-top: 25px;
   margin-left: 30%;
+  -webkit-box-shadow: -6px -6px 20px rgba(255, 255, 255, 0.6), 6px 6px 20px rgba(0, 0, 0, 0.1);
+          box-shadow: -6px -6px 20px rgba(255, 255, 255, 0.6), 6px 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+#home img:hover {
+  -webkit-box-shadow: inset -8px -8px 20px rgba(255, 255, 255, 0.3), inset 8px 8px 20px rgba(0, 0, 0, 0.1);
+          box-shadow: inset -8px -8px 20px rgba(255, 255, 255, 0.3), inset 8px 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 .home-block {
@@ -127,6 +134,7 @@ section {
 .about-content {
   font-size: 25px;
   padding-top: 3%;
+  padding-bottom: 10px;
   margin-left: 12%;
   color: white;
 }
@@ -138,7 +146,7 @@ section {
 
 #skills h1 {
   font-size: 50px;
-  padding: 10px 20px;
+  padding: 30px 20px 10px;
   margin-bottom: 30px;
   width: -webkit-max-content;
   width: -moz-max-content;
@@ -166,7 +174,7 @@ section {
   max-width: 320px;
   border-radius: 40px;
   border: none;
-  padding: 40px 30px;
+  padding: 50px 30px;
   background-color: #f3f3f3;
   -webkit-box-shadow: -6px -6px 20px rgba(255, 255, 255, 0.6), 6px 6px 20px rgba(0, 0, 0, 0.1);
           box-shadow: -6px -6px 20px rgba(255, 255, 255, 0.6), 6px 6px 20px rgba(0, 0, 0, 0.1);
@@ -199,11 +207,14 @@ section {
 }
 
 @media (max-width: 770px) {
-  html {
+  html, body {
     overflow-x: hidden !important;
   }
-  html, body, .navbar {
-    width: 88vw;
+  body {
+    overflow-x: hidden;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
   }
   div#collapsibleNavbar.collapse.navbar-collapse {
     margin-left: 10px;
@@ -214,12 +225,6 @@ section {
     -webkit-box-pack: center !important;
         -ms-flex-pack: center !important;
             justify-content: center !important;
-  }
-  #home .home-intro {
-    font-size: 47px;
-  }
-  #home .home-intro span {
-    font-size: 30px;
   }
   #home div.row div.col-md-6 {
     padding-right: 0;
