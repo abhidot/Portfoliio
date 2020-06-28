@@ -8,6 +8,7 @@
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=MuseoModerno:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="style/main.css">
 </head>
 <body>
@@ -33,11 +34,11 @@
         <section id="about" >
             <div class="row">
                 <div class="col-md-9">
-                    <div class="about-heading">
+                    <div class="about-heading" data-aos="slide-right" >
                         <span></span>
                         Wanna know about me ?
                     </div>
-                    <div class=" about-content">
+                    <div class=" about-content" data-aos="slide-right" data-aos-delay="100">
                         Full Stack Web Developer at Cyberlabs <br>
                         Passionate UI/UX Designer <br>
                         CSE undergrad at IIT(ISM) <br><br><br>
@@ -50,7 +51,7 @@
 
         <!--Skills Page-->
         <section id="skills" >
-            <div><h1>Skills I know</h1></div>
+            <div data-aos="slide-right"><h1>Skills I know</h1></div>
             <div class="row">
                 <div class="col-md-3 card">
                     <div class="imgBx">
@@ -61,7 +62,7 @@
                         <p>Full Stack Web Developer with good knowledge of the trendy MERN stack.</p>
                     </div>
                 </div>
-                <div class="col-md-3 card">
+                <div class="col-md-3 card" >
                     <div class="imgBx">
                         <img src="./images/frontend.svg" style="width: 250px;">
                     </div>
@@ -85,9 +86,9 @@
 
         <!--Projects Section-->
         <section id="projects" >
-            <div><h1>Websites</h1></div>
+            <div data-aos="slide-right"><h1>Websites</h1></div>
             <div class="wrapper">
-                <div class="card" id="ismConnect">
+                <div class="card" id="ismConnect" >
                     <div class="hovered">
                         <h2>ISM Connect</h2> 
                         <span>A Social Network to develop an online community so that thoughts, ideas and other plans can be shared with a single click.</span><br>     
@@ -109,7 +110,7 @@
                         <img src="./images/covidTracker.svg">
                     </div>
                 </div>
-                <div class="card" id="arka">
+                <div class="card" id="arka" >
                     <div class="hovered">
                         <h2>ARKA</h2> 
                         <span>A dynamic website for the astronomy club of IIT(ISM). Users can add blogs and other updates to the database.</span><br>     
@@ -140,10 +141,10 @@
         <section id="achievements" >
             <div class="row">
                 <div class="col-md-10">
-                    <div class="achievement-heading">
+                    <div class="achievement-heading" data-aos="slide-left">
                         Proud moments..
                     </div>
-                    <div class=" achievement-content">
+                    <div class=" achievement-content" data-aos="slide-left">
                         <ul>
                             <li>Winter of Code - IIT(ISM) - Runner Up in Web Development Division</li>
                             <li>Qualified JEE(Advanced), 2019 with an AIR 2503(General)</li>
@@ -230,5 +231,12 @@
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init({
+      offset:400,
+      duration:1000
+  });
+</script>
 </body>
 </html>
