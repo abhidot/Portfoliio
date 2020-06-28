@@ -317,6 +317,113 @@ section {
   transition: all 0.9s ease-in-out;
 }
 
+#contact {
+  padding: 40px 10px;
+  -webkit-box-shadow: inset 8px 8px 20px rgba(0, 0, 0, 0.1);
+          box-shadow: inset 8px 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+#contact h1 {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  color: #007bff;
+}
+
+#contact .col-md-4 {
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+}
+
+#contact ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 40px;
+}
+
+#contact ul li {
+  list-style: none;
+}
+
+#contact ul li a {
+  width: 80px;
+  height: 80px;
+  background-color: #fff;
+  text-align: center;
+  line-height: 80px;
+  font-size: 35px;
+  margin: 0 10px;
+  display: block;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  border: 3px solid #fff;
+  z-index: 1;
+}
+
+#contact ul li a .icon {
+  position: relative;
+  color: #262626;
+  -webkit-transition: .5s;
+  transition: .5s;
+  z-index: 3;
+}
+
+#contact ul li a:hover .icon {
+  color: #fff;
+  -webkit-transform: rotateY(360deg);
+          transform: rotateY(360deg);
+}
+
+#contact ul li a:before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #f00;
+  -webkit-transition: .5s;
+  transition: .5s;
+  z-index: 2;
+}
+
+#contact ul li a:hover:before {
+  top: 0;
+}
+
+#contact ul li:nth-child(1) a:before {
+  background: #3b5999;
+}
+
+#contact ul li:nth-child(2) a:before {
+  background: #55acee;
+}
+
+#contact ul li:nth-child(3) a:before {
+  background: #0077b5;
+}
+
+#contact ul li:nth-child(4) a:before {
+  background-image: linear-gradient(45deg, #405de6, #3934a0, #833ab4, #c13584, #e1306c, #fd1d1d);
+}
+
+#contact ul li:nth-child(5) a:before {
+  background: #211F1F;
+}
+
 @media (max-width: 770px) {
   html, body {
     overflow-x: hidden !important;
