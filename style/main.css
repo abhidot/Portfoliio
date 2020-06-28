@@ -61,8 +61,8 @@ section {
 }
 
 #home img:hover {
-  -webkit-box-shadow: inset -8px -8px 20px rgba(255, 255, 255, 0.3), inset 8px 8px 20px rgba(0, 0, 0, 0.1);
-          box-shadow: inset -8px -8px 20px rgba(255, 255, 255, 0.3), inset 8px 8px 20px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: inset -8px -8px 20px rgba(255, 255, 255, 0.3), 4px 4px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: inset -8px -8px 20px rgba(255, 255, 255, 0.3), 4px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .home-block {
@@ -112,6 +112,7 @@ section {
 #achievements .achievement-heading {
   font-size: 45px;
   color: white;
+  border-bottom: 3px solid #007bff;
 }
 
 #achievements .achievement-content {
@@ -129,6 +130,7 @@ section {
   margin-top: 6%;
   margin-left: 10%;
   color: white;
+  border-bottom: 3px solid #007bff;
 }
 
 .about-content {
@@ -142,6 +144,7 @@ section {
 #skills {
   font-size: normal;
   background-color: #f3f3f3;
+  padding-bottom: 40px;
 }
 
 #skills h1 {
@@ -204,6 +207,114 @@ section {
   color: #007bff;
   font-weight: 700;
   font-size: 1.6em;
+}
+
+#projects {
+  background-color: #333;
+  min-height: 100vh;
+}
+
+#projects h1 {
+  color: white;
+  font-size: 45px;
+  padding: 10px 20px 10px;
+  margin-bottom: 30px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  overflow-wrap: break-word;
+  text-align: center;
+  border-bottom: 3px solid #007bff;
+}
+
+#projects .wrapper {
+  padding: auto 60px;
+  padding-bottom: 40px;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-grid-columns: (minmax(250px, 400px))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(250px, 400px));
+  grid-column-gap: 80px;
+  grid-row-gap: 30px;
+  position: relative;
+}
+
+#projects .wrapper #ismConnect .hovered {
+  background-image: -webkit-gradient(linear, left bottom, right top, from(#051937), color-stop(#004d7a), color-stop(#008793), color-stop(#00bf72), to(#a8eb12));
+  background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+}
+
+#projects .wrapper #covid .hovered {
+  background-image: -webkit-gradient(linear, left bottom, right top, from(#845ec2), color-stop(#eb4d9f), color-stop(#ff695a), color-stop(#feac00), to(#a8eb12));
+  background-image: linear-gradient(to right top, #845ec2, #eb4d9f, #ff695a, #feac00, #a8eb12);
+}
+
+#projects .wrapper #newsroom .hovered {
+  background-image: -webkit-gradient(linear, left bottom, right top, from(#d16ba5), color-stop(#c777b9), color-stop(#ba83ca), color-stop(#aa8fd8), color-stop(#9a9ae1), color-stop(#8aa7ec), color-stop(#79b3f4), color-stop(#69bff8), color-stop(#52cffe), color-stop(#41dfff), color-stop(#46eefa), to(#5ffbf1));
+  background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+}
+
+#projects .wrapper #arka .hovered {
+  background-image: -webkit-gradient(linear, left bottom, right top, from(#370505), color-stop(#690026), color-stop(#9c0050), color-stop(#cb008c), to(#eb12d8));
+  background-image: linear-gradient(to right top, #370505, #690026, #9c0050, #cb008c, #eb12d8);
+}
+
+#projects .wrapper .card {
+  padding: 0;
+  height: 210px;
+  background-color: #232323;
+  color: #f3f3f3;
+  margin: 3%;
+  position: relative;
+}
+
+#projects .wrapper .card .normal {
+  padding: 20px;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+}
+
+#projects .wrapper .card .normal img {
+  width: 40%;
+  padding-bottom: 20px;
+}
+
+#projects .wrapper .card .hovered {
+  padding: 20px;
+  text-align: center;
+  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-clip-path: circle(10% at 100% 0%);
+          clip-path: circle(10% at 100% 0%);
+}
+
+#projects .wrapper .card .hovered a {
+  margin-top: 5px;
+}
+
+#projects .wrapper .card:hover .hovered {
+  -webkit-clip-path: circle(100%);
+          clip-path: circle(100%);
+  display: inline;
+  -webkit-transition: all 0.9s ease-in-out;
+  transition: all 0.9s ease-in-out;
+}
+
+#projects .wrapper .card:hover .normal {
+  display: none;
+  -webkit-transition: all 0.9s ease-in-out;
+  transition: all 0.9s ease-in-out;
 }
 
 @media (max-width: 770px) {

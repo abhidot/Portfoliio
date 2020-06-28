@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=MuseoModerno:wght@600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
-//Variables
 
 *{
     margin: 0;
@@ -56,7 +55,7 @@ section {
 
         &:hover {
             box-shadow:inset -8px -8px 20px rgba(255,255,255,0.3),
-        inset 8px 8px 20px rgba(0,0,0,0.1);
+        4px 4px 10px rgba(0,0,0,0.1);
         }
     }
 }
@@ -99,6 +98,7 @@ section {
     .achievement-heading {
         font-size: 45px;
         color: white;
+        border-bottom:3px solid rgb(0, 123, 255);
     }
     .achievement-content {
         font-size: 20px;
@@ -115,6 +115,7 @@ section {
     margin-top: 6%;
     margin-left: 10%;
     color: white;
+    border-bottom:3px solid rgb(0, 123, 255);
 }
 .about-content {
     font-size: 25px;
@@ -127,6 +128,7 @@ section {
 #skills  {
     font-size: normal;
     background-color: #f3f3f3;
+    padding-bottom: 40px;
 
     h1 {
         font-size: 50px;
@@ -183,7 +185,93 @@ section {
     }
 }
 
+#projects {
+    background-color: #333;
+    min-height: 100vh;
 
+    h1 {
+        color: white;
+        font-size: 45px;
+        padding:10px 20px 10px;
+        margin-bottom: 30px;
+        width: max-content;
+        overflow-wrap: break-word;
+        text-align: center;
+        border-bottom:3px solid rgb(0, 123, 255);
+    }
+
+    .wrapper{
+        padding: auto 60px;
+        padding-bottom: 40px;
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        grid-template-columns: repeat(auto-fit,minmax(250px,400px));
+        grid-column-gap: 80px;
+        grid-row-gap:30px;
+        position: relative;
+
+        #ismConnect .hovered {
+            background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+        }
+
+        #covid .hovered {
+            background-image: linear-gradient(to right top, #845ec2, #eb4d9f, #ff695a, #feac00, #a8eb12);
+        }
+
+        #newsroom .hovered {
+            background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+        }
+
+        #arka .hovered {
+            background-image: linear-gradient(to right top, #370505, #690026, #9c0050, #cb008c, #eb12d8);
+        }
+
+        .card {
+            padding: 0 ;
+            height: 210px;
+            background-color: #232323;
+            color: #f3f3f3;
+            margin: 3%;
+            position: relative;
+            
+            .normal {
+                padding:20px;
+                text-align: center;
+                align-items: center;
+                position: absolute;
+                img{
+                    width: 40%;
+                    padding-bottom: 20px;;
+                }
+            }
+
+            .hovered {
+                padding:20px;
+                text-align: center;
+                height: 100%;
+                align-items: center;
+                clip-path: circle(10% at 100% 0%);
+
+                a {
+                    margin-top: 5px;
+                }
+            }
+
+            &:hover{
+                .hovered {
+                    clip-path: circle(100%);
+                    display: inline;
+                    transition:all 0.9s ease-in-out;
+                }
+                .normal {
+                    display: none;
+                    transition: all 0.9s ease-in-out;
+                }
+            }
+        }
+    }
+}
 
 
 
